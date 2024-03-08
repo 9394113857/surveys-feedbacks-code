@@ -1,0 +1,9 @@
+# Navigate to the root path of your project
+cd path\to\your\project
+
+# Create a new Python file named app.py using New-Item cmdlet
+New-Item -ItemType File -Name app.py
+
+# Open the newly created app.py file in Visual Studio Code
+code .\app.py
+

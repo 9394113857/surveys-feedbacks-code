@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1>Survey Form</h1>
+    <form action="{{ url_for('submit') }}" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="feedback">Feedback:</label><br>
+        <textarea id="feedback" name="feedback" required></textarea><br>
+        <label for="rating">Rating (1-5):</label><br>
+        <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <a href="{{ url_for('view_survey_records') }}">View Survey Records</a> | <a href="/feedback">Switch to Feedback Form</a> 
+</body>
+</html>

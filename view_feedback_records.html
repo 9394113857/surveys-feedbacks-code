@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Feedback Records</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>View Feedback Records</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Feedback</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        {% for feedback_record in feedback_records %}
+        <tr>
+            <td>{{ feedback_record[0] }}</td>
+            <td>{{ feedback_record[1] }}</td>
+            <td>{{ feedback_record[2] }}</td>
+            <td>{{ feedback_record[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/feedback">Back to Feedback Form</a> | <a href="/">Back to Survey Form</a>
+</body>
+</html>
